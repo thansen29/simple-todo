@@ -1,0 +1,21 @@
+.todo-container {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  border: 1px solid green;
+  min-height: 60%;
+}
+
+.todo-list-container {
+  display: flex;
+  width: 50%;
+  border: 1px solid grey;
+  background: blue;
+}
+
+.task-container {
+  display: flex;
+  width: 50%;
+  border: 1px solid red;
+  background: blue;
+}
