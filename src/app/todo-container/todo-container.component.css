@@ -10,12 +10,17 @@
   display: flex;
   width: 50%;
   border: 1px solid grey;
-  background: blue;
 }
 
 .task-container {
   display: flex;
   width: 50%;
   border: 1px solid red;
-  background: blue;
+}
+
+.todo-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

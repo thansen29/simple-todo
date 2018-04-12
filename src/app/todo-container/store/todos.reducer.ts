@@ -1,15 +1,23 @@
 import * as TodosActions from './todos.actions';
+import { Task } from '../task.model';
 
 export interface State {
-  title: string;
-  description: string;
-  createdAt: string;
+  tasks: Task[]
 }
 
 const initialState: State = {
-  title: 'Buy Milk',
-  description: '2% only',
-  createdAt: 'April 12, 2018'
+  tasks: [
+    new Task(
+      'Buy Milk',
+      'Only 2%',
+      'April 12, 2018'
+    ),
+    new Task(
+      'Wash clothes',
+      'with bleach',
+      'April 12, 2018'
+    )
+  ]
 };
 
 

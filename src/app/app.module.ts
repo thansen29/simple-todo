@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { TodoListComponent } from './todo-container/todo-list/todo-list.component';
 import { TodoContainerComponent } from './todo-container/todo-container.component';
 import { TaskViewComponent } from './todo-container/task-view/task-view.component';
+import { TodoItemComponent } from './todo-container/todo-list/todo-item/todo-item.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { TaskViewComponent } from './todo-container/task-view/task-view.componen
     HeaderComponent,
     TodoListComponent,
     TodoContainerComponent,
-    TaskViewComponent
+    TaskViewComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,

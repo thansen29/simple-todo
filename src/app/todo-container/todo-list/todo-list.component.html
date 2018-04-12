@@ -1,4 +1,6 @@
-<section class="todo-list">
+<h1>Task List</h1>
 
-asdasd
-</section>
+<todo-item
+  *ngFor="let task of (todoState | async).tasks"
+  [task]="task">
+</todo-item>
