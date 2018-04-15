@@ -12,7 +12,6 @@ const initialState: State = {
 export function uiReducer(state = initialState, action: UiActions.UiActions) {
   switch (action.type) {
     case UiActions.OPEN_TASK:
-      console.log("AAGAHAGAG");
       return {
         ...state,
         isOpen: true

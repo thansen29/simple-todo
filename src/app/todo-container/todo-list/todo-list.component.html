@@ -1,6 +1,7 @@
 <h1>Task List</h1>
 
 <todo-item
-  *ngFor="let task of (todoState | async).tasks"
-  [task]="task">
+  *ngFor="let task of (todoState | async).tasks; let i = index"
+  [task]="task"
+  [index]="i">
 </todo-item>
