@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 
+import { AppRoutingModule } from './app-routing.module';
 import { reducers } from './store/app.reducer';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -22,6 +23,7 @@ import { TodoItemComponent } from './todo-container/todo-list/todo-item/todo-ite
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     StoreModule.forRoot(reducers)
   ],
   providers: [],

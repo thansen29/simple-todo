@@ -1,4 +1,6 @@
-<main class="todo-item">
+<main
+  class="todo-item"
+  (click)="!isOpen ? selectItem() : null">
 
   <span> {{ task.title }}</span>
 
