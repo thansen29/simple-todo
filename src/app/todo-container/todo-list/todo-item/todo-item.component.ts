@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs/Subscription';
 import { Task } from '../../task.model';
 import { Store } from '@ngrx/store';
 import * as fromUi from '../../../store/ui.reducer';
@@ -13,7 +14,8 @@ import * as uiActions from '../../../store/ui.actions';
 export class TodoItemComponent implements OnInit {
   @Input() task: Task;
   @Input() index: number;
-  isOpen: boolean = false;
+
+  subscription: Subscription;
 
   constructor(private store: Store<fromUi.State>,
               private router: Router) { }
@@ -23,7 +25,6 @@ export class TodoItemComponent implements OnInit {
 
   selectItem() {
     this.store.dispatch(new uiActions.OpenTask());
-    this.isOpen = true;
     this.router.navigate([`/tasks/${this.index}`])
   }
 

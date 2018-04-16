@@ -11,6 +11,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class TodoListComponent implements OnInit {
   todoState: Observable<fromTodos.State>;
+
   constructor(private store: Store<fromTodos.State>) { }
 
   ngOnInit() {
