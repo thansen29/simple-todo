@@ -1,3 +1,8 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+
 .todo-item {
   display: flex;
   width: 250px;
@@ -15,4 +20,8 @@
     background: #175bd5;
     transition: background-color 200ms;
   }
+}
+
+.checkbox-wrapper {
+  margin-left: 15px;
 }

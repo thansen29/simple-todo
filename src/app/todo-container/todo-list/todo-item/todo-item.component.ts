@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { Task } from '../../task.model';
@@ -14,6 +14,9 @@ import * as uiActions from '../../../store/ui.actions';
 export class TodoItemComponent implements OnInit {
   @Input() task: Task;
   @Input() index: number;
+  @Output() checkedTask = new EventEmitter<number>();
+
+  checked: boolean = false;
 
   subscription: Subscription;
 
@@ -26,6 +29,11 @@ export class TodoItemComponent implements OnInit {
   selectItem() {
     this.store.dispatch(new uiActions.OpenTask());
     this.router.navigate([`/tasks/${this.index}`])
+  }
+
+  handleCheck() {
+    this.checked = !this.checked;
+    this.checkedTask.emit(this.index);
   }
 
 }

@@ -17,6 +17,8 @@ import * as todosActions from '../store/todos.actions';
 export class TodoListComponent implements OnInit {
   todoState: Observable<Task[]>;
 
+  checkedIndices = [];
+
   constructor(private store: Store<fromTodos.State>) { }
 
   ngOnInit() {
@@ -29,8 +31,18 @@ export class TodoListComponent implements OnInit {
     const createdAt = moment().format('MMMM Do, YYYY')
     this.store.dispatch(new todosActions.AddTask({ title, description, createdAt }))
     form.reset();
+  }
 
+  selectItem(index: number) {
+    if (this.checkedIndices.includes(index)) {
+      this.checkedIndices = this.checkedIndices.splice(index, 1);
+    } else {
+      this.checkedIndices.push(index);
+    }
+  }
 
+  deleteItems() {
+    debugger
   }
 
 }

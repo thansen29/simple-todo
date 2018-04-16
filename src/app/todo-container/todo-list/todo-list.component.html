@@ -3,7 +3,8 @@
 <todo-item
   *ngFor="let task of (todoState | async).tasks; let i = index"
   [task]="task"
-  [index]="i">
+  [index]="i"
+  (checkedTask)="selectItem($event)">
 </todo-item>
 
 <hr>

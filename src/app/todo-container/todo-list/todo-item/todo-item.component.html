@@ -1,7 +1,16 @@
-<main
-  class="todo-item"
-  (click)="selectItem()">
+<section class="flex">
+  <main
+    class="todo-item"
+    (click)="selectItem()">
 
-  <span> {{ task.title }}</span>
+    <span> {{ task.title }}</span>
 
-</main>
+  </main>
+
+  <aside class="checkbox-wrapper">
+    <input
+      type="checkbox"
+      (click)="handleCheck()">
+  </aside>
+
+</section>
