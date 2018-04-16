@@ -12,7 +12,7 @@ export class AddTask implements Action {
 export class DeleteTasks implements Action {
   readonly type = DELETE_TASKS;
 
-  constructor(public payload: indices) {}
+  constructor(public payload: number[]) {}
 }
 
 export type TodosActions = (

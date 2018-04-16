@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Store } from '@ngrx/store';
+import * as fromApp from '../../store/app.reducer';
 import * as fromTodos from '../store/todos.reducer';
 import { Task } from '../task.model';
 
@@ -12,12 +13,12 @@ import { Task } from '../task.model';
   styleUrls: ['./task-view.component.scss'],
 })
 export class TaskViewComponent implements OnInit, OnDestroy {
-  allTasks: Observable<any>;
+  allTasks: Observable<fromTodos.State>;
   task: Task;
   subscription: Subscription;
   routeSubscription: Subscription
 
-  constructor(private store: Store<fromTodos.State>,
+  constructor(private store: Store<fromApp.AppState>,
               private route: ActivatedRoute) { }
 
   ngOnInit() {

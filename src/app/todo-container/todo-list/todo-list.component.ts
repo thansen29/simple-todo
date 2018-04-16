@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import * as fromTodos from '../store/todos.reducer';
+import * as fromApp from '../../store/app.reducer';
 import { Task } from '../task.model';
 import { Observable } from 'rxjs/Observable';
 import { NgForm } from '@angular/forms'
@@ -16,11 +17,11 @@ import * as todosActions from '../store/todos.actions';
   styleUrls: ['./todo-list.component.scss']
 })
 export class TodoListComponent implements OnInit {
-  todoState: Observable<Task[]>;
+  todoState: Observable<fromTodos.State>;
 
   checkedIndices = [];
 
-  constructor(private store: Store<fromTodos.State>,
+  constructor(private store: Store<fromApp.AppState>,
               private router: Router,
               private route: ActivatedRoute) { }
 
