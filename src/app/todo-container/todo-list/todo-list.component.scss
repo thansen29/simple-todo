@@ -1,0 +1,60 @@
+hr {
+  width: 90%;
+}
+
+.form-container {
+  width: 250px;
+}
+
+.input-row {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.input {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid rgb(204, 204, 204);
+  &:focus {
+    outline: none;
+    border: 1px solid cornflowerblue;
+  }
+  &.ng-touched.ng-invalid {
+    border: 1px solid red;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+.button {
+  padding: 10px;
+  color: white;
+  font-family: sans-serif;
+  background: #3a7bf0;
+  transition: background-color 200ms;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    background: #175bd5;
+    transition: background-color 200ms;
+  }
+}
+
+.button-disabled {
+  padding: 10px;
+  color: white;
+  font-family: sans-serif;
+  background: cornflowerblue;
+  transition: background-color 200ms;
+  border: none;
+}
+
+textarea {
+  border: 1px solid rgb(204, 204, 204);
+}

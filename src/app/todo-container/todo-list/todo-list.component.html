@@ -5,3 +5,45 @@
   [task]="task"
   [index]="i">
 </todo-item>
+
+<hr>
+
+<form
+  class="form-container"
+  (ngSubmit)="addItems(form)"
+  #form="ngForm">
+
+  <div class="input-row">
+    <input
+      class="input"
+      ngModel
+      name="title"
+      placeholder="Title"
+      required>
+  </div>
+
+  <div class="input-row">
+    <textarea
+      class="input"
+      ngModel
+      name="description"
+      placeholder="Description"></textarea>
+  </div>
+
+  <div class="button-wrapper">
+    <button
+      type="submit"
+      [ngClass]="{ 'button': form.valid, 'button-disabled': form.invalid }"
+      [disabled]="form.invalid">
+    Add Task
+    </button>
+
+    <button
+      type="button"
+      (click)="deleteItems()"
+      class="button">
+    Delete Task(s)
+    </button>
+
+  </div>
+</form>

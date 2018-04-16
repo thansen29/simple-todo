@@ -3,14 +3,13 @@
   width: 100%;
   display: flex;
   min-height: 60%;
-  /* border: 1px solid grey; */
+  padding-bottom: 50px;
 }
 
 .todo-list-container {
   display: flex;
   width: 50%;
   border: 1px solid grey;
-  /* border-right: 1px solid grey; */
 }
 
 .task-container {

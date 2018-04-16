@@ -1,12 +1,18 @@
 .todo-item {
   display: flex;
-  min-width: 200px;
-  border: 1px solid #ccccd1;
+  width: 250px;
+  border: 1px solid rgb(204, 204, 204);
   padding: 10px;
+  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   margin: 10px 0;
+  color: white;
+  background: #3a7bf0;
+  transition: background-color 200ms;
   &:hover {
     cursor: pointer;
+    background: #175bd5;
+    transition: background-color 200ms;
   }
 }
