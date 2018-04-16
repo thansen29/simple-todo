@@ -17,6 +17,12 @@
   width: 50%;
 }
 
+.num-todos {
+  position: absolute;
+  margin-left: 25px;
+  margin-top: 26px;
+}
+
 .todo-list {
   width: 100%;
   display: flex;

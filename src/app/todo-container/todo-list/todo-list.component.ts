@@ -5,6 +5,7 @@ import { Task } from '../task.model';
 import { Observable } from 'rxjs/Observable';
 import { NgForm } from '@angular/forms'
 import * as moment from 'moment';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import * as todosActions from '../store/todos.actions';
 
@@ -19,7 +20,9 @@ export class TodoListComponent implements OnInit {
 
   checkedIndices = [];
 
-  constructor(private store: Store<fromTodos.State>) { }
+  constructor(private store: Store<fromTodos.State>,
+              private router: Router,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.todoState = this.store.select('todos');
@@ -44,6 +47,7 @@ export class TodoListComponent implements OnInit {
   deleteItems() {
     this.store.dispatch(new todosActions.DeleteTasks(this.checkedIndices));
     this.checkedIndices = [];
+    this.router.navigate(['/']);
   }
 
 }

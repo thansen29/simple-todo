@@ -6,6 +6,7 @@
   </main>
 
   <aside class="task-container">
+    <span class="num-todos">{{ (todoState | async).tasks.length }} todos</span>
 
     <div
       [ngStyle]="{ 'width': '100%' }">

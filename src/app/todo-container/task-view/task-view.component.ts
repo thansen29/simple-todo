@@ -9,7 +9,7 @@ import { Task } from '../task.model';
 @Component({
   selector: 'task-view',
   templateUrl: './task-view.component.html',
-  styleUrls: ['./task-view.component.scss']
+  styleUrls: ['./task-view.component.scss'],
 })
 export class TaskViewComponent implements OnInit, OnDestroy {
   allTasks: Observable<any>;
@@ -33,17 +33,10 @@ export class TaskViewComponent implements OnInit, OnDestroy {
         )
       }
     );
-
   }
-
-
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
     this.routeSubscription.unsubscribe();
   }
-
-  // need to un select when clicking another item
-  // need to listen for route changing to update the item in view
-
 }
