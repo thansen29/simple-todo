@@ -2,20 +2,20 @@
   margin-top: 25px;
   width: 100%;
   display: flex;
-  border: 1px solid green;
   min-height: 60%;
+  /* border: 1px solid grey; */
 }
 
 .todo-list-container {
   display: flex;
   width: 50%;
   border: 1px solid grey;
+  /* border-right: 1px solid grey; */
 }
 
 .task-container {
   display: flex;
   width: 50%;
-  border: 1px solid red;
 }
 
 .todo-list {

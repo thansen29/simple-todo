@@ -10,7 +10,7 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
-  todoState: Observable<fromTodos.State>;
+  todoState: Observable<any>;
 
   constructor(private store: Store<fromTodos.State>) { }
 

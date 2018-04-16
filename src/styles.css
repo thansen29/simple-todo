@@ -8,3 +8,7 @@ body {
 li {
   list-style: none;
 }
+
+h1 {
+  font-size: 18px;
+}

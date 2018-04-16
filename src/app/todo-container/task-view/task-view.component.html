@@ -1,4 +1,26 @@
-task-view works!
-<p>{{ task.title }}</p>
-<p>{{ task.description }}</p>
-<p>{{ task.createdAt }}</p>
+<main class="task-view-container animated slideInRight">
+  <h1>{{ task.title }}</h1>
+
+
+  <div class="row">
+    <span class="item-type">
+      Description
+    </span>
+
+    <span class="item-value">
+      {{ task.description }}
+    </span>
+  </div>
+
+  <div class="row">
+    <span class="item-type">
+      Created at:
+    </span>
+
+    <span class="item-value">
+      {{ task.createdAt }}
+    </span>
+  </div>
+
+
+</main>

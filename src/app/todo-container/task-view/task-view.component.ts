@@ -9,10 +9,10 @@ import { Task } from '../task.model';
 @Component({
   selector: 'task-view',
   templateUrl: './task-view.component.html',
-  styleUrls: ['./task-view.component.css']
+  styleUrls: ['./task-view.component.scss']
 })
 export class TaskViewComponent implements OnInit, OnDestroy {
-  allTasks: Observable<fromTodos.State>;
+  allTasks: Observable<any>;
   task: Task;
   subscription: Subscription;
   routeSubscription: Subscription
@@ -32,7 +32,7 @@ export class TaskViewComponent implements OnInit, OnDestroy {
           }
         )
       }
-    )
+    );
 
   }
 

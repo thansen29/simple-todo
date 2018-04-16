@@ -5,7 +5,11 @@
   </main>
 
   <aside class="task-container">
-    <router-outlet></router-outlet>
+
+    <div [ngStyle]="{ 'width': '100%' }">
+      <router-outlet></router-outlet>
+    </div>
+
   </aside>
 
 </section>

@@ -9,7 +9,7 @@ const initialState: State = {
   tasks: [
     new Task(
       'Buy Milk',
-      'Only 2%',
+      '2% milk. If they dont have that then get vanilla soy milk. I usually get silk brand but it doesnt really matter i guess',
       'April 12, 2018'
     ),
     new Task(
