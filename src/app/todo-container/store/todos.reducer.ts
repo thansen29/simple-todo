@@ -1,5 +1,6 @@
 import * as TodosActions from './todos.actions';
 import { Task } from '../task.model';
+import * as _ from 'lodash';
 
 export interface State {
   tasks: Task[]
@@ -31,6 +32,20 @@ export function todosReducer(state = initialState, action: TodosActions.TodosAct
         ...state,
         tasks: newTasks
       }
+
+    case TodosActions.DELETE_TASKS:
+      const indices = action.payload;
+      const tasks = [...state.tasks];
+      const total = [];
+      _.forEach(tasks, (task, index) => {
+        if (!indices.includes(index)) {
+          total.push(task);
+        }
+      });
+      return {
+        ...state,
+        tasks: total
+      };
     default:
       return state;
   }

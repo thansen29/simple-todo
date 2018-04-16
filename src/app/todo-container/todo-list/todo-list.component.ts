@@ -42,7 +42,8 @@ export class TodoListComponent implements OnInit {
   }
 
   deleteItems() {
-    debugger
+    this.store.dispatch(new todosActions.DeleteTasks(this.checkedIndices));
+    this.checkedIndices = [];
   }
 
 }
