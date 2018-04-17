@@ -24,7 +24,7 @@ export class DropdownComponent implements OnInit {
   }
 
   selectItem(item) {
-    const git = "https://github.com/thansen29";
+    const git = "https://github.com/thansen29/simple-todo";
     const linked = "https://www.linkedin.com/in/thomas-hansen-1a0a51132/";
     const port = "http://www.tomhansen.io";
     switch (item) {
