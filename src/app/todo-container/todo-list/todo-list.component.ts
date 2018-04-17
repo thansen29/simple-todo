@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
+import { NgForm } from '@angular/forms'
+import { Router } from '@angular/router';
+import * as moment from 'moment';
+
 import * as fromTodos from '../store/todos.reducer';
 import * as fromApp from '../../store/app.reducer';
 import { Task } from '../task.model';
-import { Observable } from 'rxjs/Observable';
-import { NgForm } from '@angular/forms'
-import * as moment from 'moment';
-import { Router, ActivatedRoute } from '@angular/router';
-
 import * as todosActions from '../store/todos.actions';
 
 
@@ -22,8 +22,7 @@ export class TodoListComponent implements OnInit {
   checkedIndices = [];
 
   constructor(private store: Store<fromApp.AppState>,
-              private router: Router,
-              private route: ActivatedRoute) { }
+              private router: Router) { }
 
   ngOnInit() {
     this.todoState = this.store.select('todos');

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store'
+
 import * as fromTodos from './store/todos.reducer';
 import * as fromApp from '../store/app.reducer';
-
 
 @Component({
   selector: 'todo-container',

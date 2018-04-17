@@ -8,7 +8,6 @@ const initialState: State = {
   isOpen: false
 };
 
-
 export function uiReducer(state = initialState, action: UiActions.UiActions) {
   switch (action.type) {
     case UiActions.OPEN_TASK:

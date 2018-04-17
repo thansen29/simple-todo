@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { Task } from '../../task.model';
 import { Store } from '@ngrx/store';
+
 import * as fromUi from '../../../store/ui.reducer';
 import * as uiActions from '../../../store/ui.actions';
 

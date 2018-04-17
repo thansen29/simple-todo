@@ -10,7 +10,6 @@
 }
 
 .displayed-item {
-  min-width: 150px;
   padding: 5px;
   background: white;
 }
@@ -20,13 +19,12 @@
   margin: 0;
   box-sizing: border-box;
   background: white;
-  // border: 1px solid #ccccd1;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
+  border-right: 1px solid grey;
+  border-left: 1px solid grey;
+  border-bottom: 1px solid grey;
   z-index: 5;
   position: absolute;
-  width: 100%;
+  width: 101%;
   top: 47px;
 }
 
