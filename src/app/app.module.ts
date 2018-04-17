@@ -11,6 +11,7 @@ import { TodoListComponent } from './todo-container/todo-list/todo-list.componen
 import { TodoContainerComponent } from './todo-container/todo-container.component';
 import { TaskViewComponent } from './todo-container/task-view/task-view.component';
 import { TodoItemComponent } from './todo-container/todo-list/todo-item/todo-item.component';
+import { DropdownComponent } from './header/dropdown/dropdown.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { TodoItemComponent } from './todo-container/todo-list/todo-item/todo-ite
     TodoListComponent,
     TodoContainerComponent,
     TaskViewComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,

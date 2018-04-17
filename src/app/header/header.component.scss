@@ -11,3 +11,14 @@ img {
   width: 40px;
   height: 40px;
 }
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-wrapper {
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,23 @@
+<section
+  class="dropdown-section"
+  (blur)="handleBlur()"
+  tabIndex="0">
+
+  <div
+    class="displayed-item"
+    (click)="handleSelect()">
+    {{ selected }}
+  </div>
+
+  <ul
+    class="list-content"
+    *ngIf="isOpen">
+    <li
+      class="dropdown-item"
+      *ngFor="let item of items"
+      (click)="selectItem(item)">
+      {{ item }}
+    </li>
+  </ul>
+
+</section>
